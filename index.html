@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Länk till Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <!--Länk till min CSS-fil-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Länk till FontAwsome som jag hämtat 4 ikoner ifrån -->
+    <script src="https://kit.fontawesome.com/afbac9db1c.js" crossorigin="anonymous"></script>
+
+    <!-- Länk till Google Font där jag hämtat den font jag vill ha på paragrafer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <!-- Länk till Google Font där jag hämtat den font jag vill ha på rubriker -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Maria Lövgren</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top"><!-- Flera bootstrap klasser för navbar som innehåller regler för en expanderbar meny. Navigeringen är fixerad i toppen av webbläsaren. -->
+            <div class="container"> <!-- Klassen container ligger som en wrapper runt alla element i headern. (container gör att det läggs marginal till höger och vänster (margin auto). Själva lådan centreras.)-->
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="images/tux.png" alt="logga som består av en bild på en sittande pingvin" width="35" height="40" class="d-inline-block align-text-top">
+                    <h1 class="d-inline p-2">About Linux</h1>
+                </a>
+
+                <!-- Ikon som ersätter menyn från liten skärm till medium skärm. Gör att den vanliga navigeringen "fälls" ihop och ersätts med denna ikonen. -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    
+                <!-- Länkarna i huvudmenyn --> 
+                <!-- Justify-content-lg-start gör så att länkarna lägger sig bredvid loggan och "About Linux" från stor skärm och uppåt. På små och mellanskärmar ligger meny-knappen till höger i headern. -->
+                <div class="collapse navbar-collapse justify-content-end justify-content-lg-start" id="main-nav">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Hem</a>
+                        <a class="nav-link" href="#">Maranjo</a>
+                        <a class="nav-link" href="#">Ubuntu</a>
+                        <a class="nav-link" href="#">Pop!_OS</a>
+                        <a class="nav-link" href="#">Andra länkar</a>
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </div> 
+                </div>                  
+            </div> <!-- Här slutar klassen container -->
+        </nav>
+    </header>
+
+    <main> 
+        <!-- Bilden i hero är lagd som en bakgrundsbild. För att få texten centrerad i mitten av bilden har jag flexat div:en som håller textelementen och lagt till 2 align-relger och flex-column. Jag har satt arie-hidden:true på denna div:en för att den består av en dekorativ bakgrundsbild -->
+        <section class="row hero">
+            <div class="hero-text col-12 align-items-center align-self-center d-flex flex-column" aria-hidden="true">
+                <h1 class="display-4">FOSS</h1>
+                <h2>And why it´s good for you.</h2>
+            </div>
+        </section>
+        
+        <section class="container article-wrapper"><!-- container som håller alla artiklar på webbsidan. Sträcker sig ner till footer. -->
+
+            <section class="row bg-white-beige mb-2 m-md-3 pt-4 pt-md-0  d-flex justify-content-center"> <!-- Här börjar sektionen som håller Manjaro artikeln. mb-2 gör att det blir en marginal mellan artiklarna och så att den gråa bakgrundsfärgen som är satt i body syns. margin och padding förändras i takt med att skärmstorleken blir större.-->
+
+                <div class="article-img-container col-11 col-md-6 d-flex position-relative overflow-hidden p-md-3"> <!-- Denna div håller bilden till artikeln Manjaro. Upp till medium skärm så är bredden 11 kolumner. Från mediumskärm och upp tar bilden 6 kolumner. Bilden fyller hela höjden trots att skärmens storlek ändras och det som overflowas göms.-->   
+                    <img src="images/manjaro_scrn.png" alt="En skärmbild på hur Manjaros operativsystem ser ut i en datorskärm" class="img-fluid article-img">
+                </div> 
+
+                <article class="article-text-wrapper col-11 col-md-6 pb-4 "> <!-- Denna wrappar hela Manjaro artikeln. Bredden är 11 kolumner vid liten skärm och från mediumskärm och uppåt är bredden 6 kolumner. -->
+                    <div class="article-header d-flex py-4 align-items-center">
+                        <img src="images/logos/manjaro.svg" alt="Logga till Manjaro" class="col-2">
+                        <h3 class="col-4 px-4">Manjaro</h3>
+                    </div>
+
+                    <div> 
+                        <p>Is an accessible, friendly, open-source operating system. Providing all the benefits of cutting-edge software combined with a focus on getting started quickly, automated tools to require less manual intervention, and help readily available when needed. Manjaro is suitable for both newcomers and experienced computer users.</p>
+
+                        <p>Unlike proprietary operating systems you have full control over your hardware without restrictions. This makes Manjaro a powerful Operating System ideal in home, work, and development environments.</p>
+
+                        <p>It is easily possible to run many popular Windows applications, using compatibility software such as Wine, PlayonLinux or Proton via Steam. The examples given here are far from comprehensive!</p>
+
+                        <p>Representing a perfect middle-ground for those who want good performance, full control, and cutting-edge software but also a degree of software stability.</p>
+                    </div>
+                </article> <!-- Här slutar wrappern till Manjaro artikeln -->   
+            </section> <!-- Här slutar sektionen som håller Manjaro artikeln-->
+        
+            <section class="row bg-white-beige mb-2 m-md-3 pt-4 pt-md-0  d-flex flex-row-reverse justify-content-center"> <!-- Här börjar sektionen som håller Ubuntu artikeln. mb-2 gör att det blir en marginal mellan artiklarna och så att den gråa bakgrundsfärgen som är satt i body syns. margin och padding förändras i takt med att skärmstorleken blir större.-->
+                <div class="article-img-container col-11 col-md-6 d-flex position-relative overflow-hidden p-md-3"> <!-- Denna div håller bilden till artikeln Ubuntu. Upp till medium skärm så är bredden 11 kolumner. Från mediumskärm och upp tar bilden 6 kolumner. Bilden fyller hela höjden trots att skärmens storlek ändras och det som overflowas göms.-->  
+                    <img src="images/ubuntu_scrn.jpeg" alt="En skärmbild på hur Ubuntus operativsystem ser ut i en datorskärm" class="img-fluid article-img">
+                </div>
+                
+                <article class="article-text-wrapper col-11 col-md-6 pb-4"> <!-- Denna wrappar hela Ubuntu artikeln. Bredden är 11 kolumner vid liten skärm och från mediumskärm och uppåt är bredden 6 kolumner. -->
+                    <div class="article-header d-flex py-4 align-items-center">
+                        <img src="images/logos/ubuntu.png" alt="Logga till Ubuntu" class="col-2">
+                        <h3 class="col-4 px-4">Ubuntu</h3>
+                    </div>
+
+                    <div>
+                        <h4>Open source</h4>
+                        <p>Ubuntu has always been free to download, use and share. We believe in the power of open source software; Ubuntu could not exist without its worldwide community of voluntary developers.</p>
+
+                        <h4>Secure</h4>
+                        <p>With a built-in firewall and virus protection software, Ubuntu is one of the most secure operating systems around. And the long-term support releases give you five years of security patches and updates.</p>
+
+                        <h4>Accessible</h4>
+                        <p>Computing is for everyone regardless of nationality, gender or disability. Ubuntu is fully translated into over 50 languages and includes essential assistive technologies.</p>
+
+                        <h4>Available on the largest range of hardware, ever</h4>
+                        <p>Canonical works closely with Dell, Lenovo and HP to certify that Ubuntu works on a wide range of their laptops and workstations. It means that a seamless Ubuntu experience is available out of the box with more hardware choice than ever.</p>
+                        <p>And Ubuntu isn’t just for the desktop, it is used in data centres around the world powering every kind of server imaginable and is by far, the most popular operating system in the cloud.</p>
+                    </div>
+                </article><!-- Här slutar wrappern till Ubuntu artikeln --> 
+            </section><!-- Här slutar sektionen som håller Ubuntu artikeln-->
+
+            <section class="row bg-white-beige mb-2 m-md-3 pt-4 pt-md-0  d-flex justify-content-center"> <!-- Här börjar sektionen som håller Pop artikeln. mb-2 gör att det blir en marginal mellan artiklarna och så att den gråa bakgrundsfärgen som är satt i body syns. margin och padding förändras i takt med att skärmstorleken blir större.-->
+                <div class="article-img-container col-11 col-md-6 d-flex position-relative overflow-hidden p-md-3"> <!-- Denna div håller bilden till artikeln Pop. Upp till medium skärm så är bredden 11 kolumner. Från mediumskärm och upp tar bilden 6 kolumner. Bilden fyller hela höjden trots att skärmens storlek ändras och det som overflowas göms.--> 
+                    <img src="images/popos_scrn.png" alt="En skärmbild på hur Pop!_OS operativsystem ser ut i en datorskärm" class="img-fluid article-img">
+                </div>
+
+                <article class="article-text-wrapper col-11 col-md-6 pb-4"> <!-- Denna wrappar hela Pop artikeln. Bredden är 11 kolumner vid liten skärm och från mediumskärm och uppåt är bredden 6 kolumner. -->
+                    <div class="article-header d-flex py-4 align-items-center">
+                        <img src="images/logos/popos.png" alt="Logga till Pop!_OS" class="col-2">
+                        <h3 class="col-4 px-4">Pop!_OS</h3>
+                    </div>
+
+                    <div>
+                        <p>Pop!_OS is an operating system for STEM and creative professionals who use their computer as a tool to discover and create. Unleash your potential on secure, reliable open source software. Based on your exceptional curiosity, we sense you have a lot of it.</p>
+
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <h4>Auto-Tiling With Pop Shell</h4>
+                                <p>Pop!_OS uses auto-tiling for the same reason that people hire assistants: Organizing your work is incredibly time-consuming. Sure, you could still move, resize, and arrange windows yourself, but why spend the time when your OS does it for you? Auto-tiling helps you be both organized and efficient, and is especially convenient on large displays.</p>
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <h4>Workspaces</h4>
+                                <p>Keep relevant content together and irrelevant content out of sight. When the clutter overwhelms you, just toss it onto another desktop. Problem solved.</p>
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <h4>Keyboard Navigation</h4>
+                                <p>Arm yourself with a dark-lord level of power at your fingertips. Use keyboard shortcuts to:</p>
+
+                                <ul>
+                                    <li>Move/resize windows</li>
+                                    <li>Search for anything</li>
+                                    <li>Launch applications</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <h4>Stacking</h4>
+                                <p>Stack application windows atop one another like tabs in a web browser. Just remember to switch off of Steam when the boss walks in.</p>
+                            </div>
+                        </div><!-- Här slutar div:en row som håller alla 4 mindre sektioner. Detta för att de små sektionerna ska lägga sig två och två från mediumstor skärm och uppåt. Varje liten sektion är omsluten av en egen div som sätter bredden på just den sektionen -->
+                    </div> <!-- Här slutar div:en som håller själva texten i artikeln. -->
+                </article><!-- Här slutar wrappern till Pop artikeln --> 
+            </section><!-- Här slutar sektionen som håller Pop artikeln-->
+
+            <section class="col-12">
+                <div>
+                    <h5 class="py-2 text-center">Things that runs different flavours of Linux</h5>
+                </div>
+            </section>
+
+            <!-- Denna sektionen består av 4 mindre artiklar som i sin tur är uppdelade i två sektioner. Jag har satt margin-bottom 2 på förälder-elementet section bara för att få till den gråa raden som visas mellan den övre och den nedre delen av artiklarna från mediumskärm och uppåt. section har två barn som består av varisn div. Även dessa har fått mb-2 för att det ska bli en grå rand mellan varje artikel i mobilläge. -->
+            <section class="row mb-2 m-md-3 d-flex justify-content-center">
+                <div class="bg-white-beige row col-12 col-md-6 d-flex mb-2 p-3">
+                    <div class="p-2 d-flex justify-content-center">
+                        <i class="fab fa-raspberry-pi fa-9x"></i>
+                    </div>
+                    <article>
+                        <h3 class="text-center">Raspberry Pi</h3>
+        
+                        <p>Raspberry Pi 400 is your complete personal computer, built into a compact keyboard. Featuring a quad-core 64-bit processor, 4GB of RAM, wireless networking, dual-display output, and 4K video playback, as well as a 40-pin GPIO header, it's the most powerful and easy-to-use Raspberry Pi computer yet.</p>
+                    </article>
+                </div>
+
+                <div class="bg-white-beige row col-12 col-md-6 d-flex mb-2 p-3">
+                    <div class="p-2 d-flex justify-content-center">
+                        <i class="fas fa-server fa-9x"></i>
+                    </div>
+    
+                    <article>
+                        <h3 class="text-center">Most servers run on Linux!</h3>
+        
+                        <p>Facebook, Google, Amazon all use some variant of Linux on their servers.</p>
+                    </article>
+                </div>
+            </section><!-- Här slutar sektionen som håller den övre delen av de små artiklarna-->
+
+            <section class="row m-md-3 d-flex justify-content-center">
+                <div class="bg-white-beige row col-12 col-md-6 d-flex mb-2 p-3">
+                    <div class="p-2 d-flex justify-content-center">
+                        <i class="fas fa-gamepad fa-9x"></i>
+                    </div>
+        
+                    <article>
+                        <h3 class="text-center">Your every day companion</h3>
+        
+                        <p>You use Linux indirectly every day. While surfing the web, using your android device or just playing some games on your Playstation 5. Even your smart washing machine is probably using Linux.</p>
+                    </article>
+                </div>
+
+                <div class="bg-white-beige row col-12 col-md-6 d-flex mb-2 p-3">
+                    <div class="p-2 d-flex justify-content-center">
+                        <i class="fas fa-euro-sign fa-9x"></i>
+                    </div>
+        
+                    <article>
+                        <h3 class="text-center">How can (a lot of) all these amazing things be totally free?</h3>
+        
+                        <p>Most things Linux are open source. This means the source code for these things can be modified and used very freely to build other things. Like the Android operating system or the version of BSD running on the Playstation 5. It's a team effort where everyone can contribute.</p>
+                    </article>
+                </div>                
+            </section><!-- Här slutar sektionen som håller den nedre delen av de små artiklarna-->
+
+        </section> <!-- Här slutar sektionen som håller samtliga artiklar på webbsidan. Även kallad wrapper -->
+    </main>
+
+    <footer class="d-flex justify-content-center align-items-center">
+        <div>
+            <p class="m-0">Maria Lövgren maria.lovgren@medieinstitutet.se</p>
+        </div>
+        
+    </footer>
+</body>
+</html>

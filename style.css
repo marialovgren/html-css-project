@@ -1,0 +1,71 @@
+/* * * * Generell styling * * * */
+body {
+    background-color: lightgray;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1.75em;
+}
+
+/* * * * Header * * * */
+/* headern måste ha en ljusgrå bakgrundsfärg för annars försvinner den färgen som är satt i body när man skrollar neråt på sidan. Detta eftersom headern är sticky och alltid syns. */
+header, nav {
+    height: 70px;
+    background-color: lightgray;
+}
+
+/* * * * Main * * * */
+.hero {
+    height: 300px;
+    background-image: url(images/welcome-img.jpg);
+}
+
+article {
+    background-color: rgb(245, 244, 244);
+}
+
+.bg-white-beige {
+    background-color: rgb(245, 244, 244);
+}
+
+.article-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-img-container {
+    box-sizing: border-box;
+}
+
+.bg-lightgrey {
+    background-color: lightgray;
+}
+
+/* * * * Footer * * * */
+footer {
+    background-color: white;
+    height: 60px;
+}
